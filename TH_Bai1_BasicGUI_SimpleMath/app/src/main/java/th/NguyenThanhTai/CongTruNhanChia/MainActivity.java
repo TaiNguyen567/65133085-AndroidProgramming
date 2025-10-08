@@ -19,7 +19,7 @@ public class MainActivity extends AppCompatActivity {
 //    (1). Khai báo các biến đối tượng nhằm liên kết đến các id trong file xml layout.
     EditText so1, so2;
     TextView ketQua;
-    Button btnTinhToan, cong, tru, nhan, chia;
+    Button btnTinhToan, cong, tru, nhan, chia, btnTroLai;
     private String phepTinh = " ";
 //  Hết (1).
 //    @SuppressLint("MissingInflatedId")
@@ -36,6 +36,7 @@ public class MainActivity extends AppCompatActivity {
         tru = findViewById(R.id.Tru);
         nhan = findViewById(R.id.Nhan);
         chia = findViewById(R.id.Chia);
+        btnTroLai = findViewById(R.id.Back);
 
         cong.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -69,6 +70,21 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 tinhToan();
+            }
+        });
+        btnTroLai.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Xóa nội dung của 2 ô nhập liệu
+                so1.setText("");
+                so2.setText("");
+                // Xóa nội dung của ô kết quả
+                ketQua.setText("");
+                // Reset lại phép tính đã chọn (để tránh lỗi)
+                phepTinh = " ";
+                // Đặt con trỏ vào ô nhập số đầu tiên
+                so1.requestFocus();
+                Toast.makeText(MainActivity.this, "Đã xóa", Toast.LENGTH_SHORT).show();
             }
         });
     }
