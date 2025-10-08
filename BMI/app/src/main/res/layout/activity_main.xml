@@ -50,22 +50,22 @@
 
     <EditText
         android:id="@+id/editTextText"
-        android:layout_width="157dp"
-        android:layout_height="22dp"
+        android:layout_width="161dp"
+        android:layout_height="48dp"
         android:ems="10"
         android:inputType="text"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.759"
+        app:layout_constraintHorizontal_bias="0.758"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.231" />
+        app:layout_constraintVertical_bias="0.222" />
 
     <EditText
         android:id="@+id/editTextText2"
-        android:layout_width="157dp"
-        android:layout_height="22dp"
+        android:layout_width="161dp"
+        android:layout_height="48dp"
         android:ems="10"
         android:inputType="text"
         android:textSize="16sp"
