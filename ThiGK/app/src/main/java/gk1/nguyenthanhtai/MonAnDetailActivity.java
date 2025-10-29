@@ -18,7 +18,7 @@ public class MonAnDetailActivity extends AppCompatActivity {
 
         tvMonAnDetail = findViewById(R.id.tvMonAnDetail);
 
-        // Nhận dữ liệu
+
         Intent intent = getIntent();
         String tenMonAn = intent.getStringExtra("TEN_MON_AN");
 

@@ -33,7 +33,7 @@
         android:id="@+id/textViewHoTen"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Nguyễn Thanh Tài"
+        android:text="Nguyễn Thành Tài"
         android:textSize="22sp"
         android:textStyle="bold"
         android:textColor="@color/black"/>
@@ -68,7 +68,7 @@
                 android:drawablePadding="12dp"
                 android:layout_marginBottom="16dp"
                 android:gravity="center_vertical"
-                app:drawableLeftCompat="@drawable/img" />
+                 />
 
             <TextView
                 android:id="@+id/textViewNganh"
@@ -79,7 +79,7 @@
                 android:drawablePadding="12dp"
                 android:layout_marginBottom="16dp"
                 android:gravity="center_vertical"
-                app:drawableLeftCompat="@drawable/img" />
+                 />
 
             <TextView
                 android:id="@+id/textViewEmail"
@@ -100,7 +100,7 @@
                 android:textSize="16sp"
                 android:drawablePadding="12dp"
                 android:gravity="center_vertical"
-                app:drawableLeftCompat="@drawable/img" />
+                 />
 
         </LinearLayout>
     </androidx.cardview.widget.CardView>

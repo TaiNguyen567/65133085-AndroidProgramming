@@ -69,7 +69,7 @@ public class BaiThuocAdapter extends RecyclerView.Adapter<BaiThuocAdapter.BaiThu
 
         public BaiThuocViewHolder(@NonNull View itemView) {
             super(itemView);
-            imgBaiThuoc = itemView.findViewById(R.id.imgBaiThuoc);
+            imgBaiThuoc = itemView.findViewById(R.id.image);
             tvTenBaiThuoc = itemView.findViewById(R.id.tvTenBaiThuoc);
             tvMoTaBaiThuoc = itemView.findViewById(R.id.tvMoTaBaiThuoc);
         }

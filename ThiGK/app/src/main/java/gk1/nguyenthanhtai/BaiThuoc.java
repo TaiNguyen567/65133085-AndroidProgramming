@@ -3,7 +3,7 @@ package gk1.nguyenthanhtai;
 public class BaiThuoc {
     private String tenBaiThuoc;
     private String moTa;
-    private int hinhAnh; // ID từ drawable
+    private int hinhAnh;
 
     public BaiThuoc(String tenBaiThuoc, String moTa, int hinhAnh) {
         this.tenBaiThuoc = tenBaiThuoc;

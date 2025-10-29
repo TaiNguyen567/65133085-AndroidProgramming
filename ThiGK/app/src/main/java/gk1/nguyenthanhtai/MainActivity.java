@@ -17,13 +17,13 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        // Ánh xạ các nút theo ID mới
+
         btnBMI = findViewById(R.id.buttonBMI);
         btnMonAn = findViewById(R.id.buttonMonAn);
         btnBaiThuoc = findViewById(R.id.buttonBaiThuoc);
         btnGioiThieu = findViewById(R.id.buttonGioiThieu);
 
-        // Chuyển sang BmiActivity
+
         btnBMI.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -32,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        // Chuyển sang MonAnActivity
+
         btnMonAn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -41,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        // Chuyển sang BaiThuocActivity
+
         btnBaiThuoc.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -50,7 +50,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        // Chuyển sang GioiThieuActivity
+
         btnGioiThieu.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -58,5 +58,7 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        
     }
 }

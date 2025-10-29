@@ -13,7 +13,7 @@ public class GioiThieuActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_gioi_thieu); // Dùng layout đã làm đẹp
+        setContentView(R.layout.activity_gioi_thieu);
 
         tvHoTen = findViewById(R.id.textViewHoTen);
         tvMSSV = findViewById(R.id.textViewMSSV);
@@ -22,12 +22,11 @@ public class GioiThieuActivity extends AppCompatActivity {
         tvEmail = findViewById(R.id.textViewEmail);
         tvPhone = findViewById(R.id.textViewPhone);
 
-        // Set thông tin
         tvHoTen.setText("Nguyễn Thành Tài");
         tvMSSV.setText("MSSV: 65133085");
         tvLop.setText("Lớp: 65CNTT-CLC");
         tvNganh.setText("Ngành: Công nghệ thông tin");
         tvEmail.setText("Email: tai.nt.65cntt@ntu.edu.vn");
-        tvPhone.setText("SĐT: 0123 456 789"); // Thay SĐT của bạn
+        tvPhone.setText("SĐT: 0123 456 789");
     }
 }
