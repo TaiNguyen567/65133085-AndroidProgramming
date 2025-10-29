@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".ChucNang2Activity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Quiz"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="16dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Mốc thời gian Chiến dịch Hồ Chí Minh - Toàn thắng"
+        android:textSize="16sp"
+        android:layout_marginBottom="24dp"/>
+
+    <EditText
+        android:id="@+id/edtThang"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Tháng"
+        android:inputType="number"
+        android:layout_marginBottom="16dp"/>
+
+    <EditText
+        android:id="@+id/edtNam"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Năm"
+        android:inputType="number"
+        android:layout_marginBottom="24dp"/>
+
+    <Button
+        android:id="@+id/btnKiemTra"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Kiểm tra Đúng/Sai"
+        android:layout_gravity="center_horizontal"/>
+
+    <TextView
+        android:id="@+id/tvKetQuaQuiz"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Hiện kết quả ở đây"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:padding="16dp"
+        android:layout_marginTop="32dp"/>
+
+</LinearLayout>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:padding="16dp"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="THI GIỮA KỲ 2"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/holo_blue_dark"
+        android:layout_marginBottom="32dp"
+        android:layout_marginTop="32dp"/>
+
+    <Button
+        android:id="@+id/buttonChucNang2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Chức năng 2: Quiz"
+        android:layout_marginBottom="16dp"/>
+
+    <Button
+        android:id="@+id/buttonChucNang3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Chức năng 3: Nhạc cách mạng"
+        android:layout_marginBottom="16dp"/>
+
+    <Button
+        android:id="@+id/buttonChucNang4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Chức năng 4: Hoạt động kỷ niệm"
+        android:layout_marginBottom="16dp"/>
+
+    <Button
+        android:id="@+id/buttonAboutMe"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="About Me"
+        android:backgroundTint="@android:color/darker_gray"
+        android:layout_marginBottom="16dp"/>
+
+</LinearLayout>
