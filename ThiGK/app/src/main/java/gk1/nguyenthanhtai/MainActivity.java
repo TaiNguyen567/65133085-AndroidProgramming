@@ -10,7 +10,7 @@ import gk1.nguyenthanhtai.R;
 
 public class MainActivity extends AppCompatActivity {
 
-    Button btnBMI, btnMonAn, btnBaiThuoc, btnGioiThieu;
+    Button btnBMI, btnMonAn, btnBaiThuoc, btnGioiThieu, btnQuizSucKhoe;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,6 +22,7 @@ public class MainActivity extends AppCompatActivity {
         btnMonAn = findViewById(R.id.buttonMonAn);
         btnBaiThuoc = findViewById(R.id.buttonBaiThuoc);
         btnGioiThieu = findViewById(R.id.buttonGioiThieu);
+        btnQuizSucKhoe = findViewById(R.id.buttonQuizSucKhoe);
 
 
         btnBMI.setOnClickListener(new View.OnClickListener() {
@@ -59,6 +60,13 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        btnQuizSucKhoe.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, QuizSucKhoeActivity.class);
+                startActivity(intent);
+            }
+        });
 
     }
 }

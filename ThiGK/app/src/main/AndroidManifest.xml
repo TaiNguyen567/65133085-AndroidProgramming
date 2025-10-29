@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="gk1.nguyenthanhtai"
-    xmlns:tools="http://schemas.android.com/tools">
+    xmlns:tools="http://schemas.android.com/tools"
+    package="gk1.nguyenthanhtai">
 
     <application
         android:allowBackup="true"
@@ -13,40 +13,39 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ThiGK"
         tools:targetApi="31">
-
+        <activity
+            android:name=".QuizSucKhoeActivity"
+            android:exported="false" />
         <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity
             android:name=".BmiActivity"
             android:exported="false" />
-
         <activity
             android:name=".MonAnActivity"
             android:exported="false" />
-
         <activity
             android:name=".MonAnDetailActivity"
             android:exported="false" />
-
         <activity
             android:name=".BaiThuocActivity"
             android:exported="false" />
-
         <activity
             android:name=".BaiThuocDetailActivity"
             android:exported="false" />
-
         <activity
             android:name=".GioiThieuActivity"
             android:exported="false" />
-
+        <activity
+            android:name=".QuizSucKhoeActivity"
+            android:exported="false" />
     </application>
 
 </manifest>
