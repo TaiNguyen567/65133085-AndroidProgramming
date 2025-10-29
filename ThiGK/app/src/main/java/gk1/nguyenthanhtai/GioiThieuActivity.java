@@ -23,7 +23,7 @@ public class GioiThieuActivity extends AppCompatActivity {
         tvPhone = findViewById(R.id.textViewPhone);
 
         // Set thông tin
-        tvHoTen.setText("Nguyễn Thanh Tài");
+        tvHoTen.setText("Nguyễn Thành Tài");
         tvMSSV.setText("MSSV: 65133085");
         tvLop.setText("Lớp: 65CNTT-CLC");
         tvNganh.setText("Ngành: Công nghệ thông tin");
