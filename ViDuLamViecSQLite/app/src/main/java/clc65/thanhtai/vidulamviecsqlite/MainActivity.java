@@ -1,8 +1,13 @@
 package clc65.thanhtai.vidulamviecsqlite;
 
+import android.content.ContentValues;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.ArrayAdapter;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ListView;
 
 import androidx.activity.EdgeToEdge;
@@ -11,53 +16,95 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import java.util.ArrayList;
+
+
 public class MainActivity extends AppCompatActivity {
-
     SQLiteDatabase db;
-    Cursor resultSet;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        Button bThem = findViewById(R.id.btnThem);
 
-//        Tạo cơ sở dữ liệu
-        db = openOrCreateDatabase("books.db", MODE_PRIVATE, null);
-//        Tạo bảng book
-//        String sqlTaoBang = "CREATE TABLE BOOKS(BookID integer PRIMARY KEY, BookName text, Page integer, Price float, Description text )";
-//        String sqlXoaBang = "DROP TABLE IF EXISTS BOOKS";
-//        db.execSQL(sqlTaoBang);
-//        db.execSQL(sqlXoaBang);
-//
-//        String sqlThem1 = "INSERT INTO BOOKS VALUES(1, 'Toán', 100, 88, 'Sách về Toán')";
-//        String sqlThem2 = "INSERT INTO BOOKS VALUES(2, 'Văn', 100, 80, 'Sách về Văn')";
-//        db.execSQL(sqlThem1);
-//        db.execSQL(sqlThem2);
-
-//        Truy vấn dữ liệu
-        String sqlSelectAll = "SELECT * FROM BOOKS";
-        Cursor cursor = db.rawQuery(sqlSelectAll, null);
-        while (true) {
-//            Lấy dữ liệu của dòng/bản ghi hiện tại, trỏ bởi resultSet
-            int maSach = resultSet.getInt(0);
-            String tenSach = resultSet.getString(1);
-            int soTrang = resultSet.getInt(2);
-            float donGia = resultSet.getFloat(3);
-            String moTa = resultSet.getString(4);
-//          Gói vào 1 đối tượng
-//          Thêm vào 1 biến danh sách
-
-//          Di chuyển đến bản ghi tiếp theo
-            resultSet.moveToNext();
-            if (resultSet.moveToNext() == false) break;
-        }
-
-        db.close();
-
-//        Hiện lên ListView
-        ListView listView = findViewById(R.id.TenSach);
-
+        //getBookData();
+        ArrayList<String> lsName = getNameBook();
+        // Set data to listview
+        ListView listView = findViewById(R.id.lvNameB);
+        ArrayAdapter<String> adapterNameBook = new ArrayAdapter<>(this,android.R.layout.simple_list_item_1,lsName);
+        listView.setAdapter(adapterNameBook);
+        bThem.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                EditText edtName = findViewById(R.id.edtName);
+                String nameBook = edtName.getText().toString();
+                EditText edtPrice = findViewById(R.id.edtPrice);
+                float priceBook = Float.parseFloat(edtPrice.getText().toString());
+                // ADD DB
+                ContentValues row = new ContentValues();
+                row.put("BookName",nameBook);
+                row.put("Price",priceBook);
+                db = openOrCreateDatabase("books",MODE_PRIVATE,null);
+                db.insert("BOOKS",null,row);
+                db.close();
+                lsName.add(nameBook);
+                adapterNameBook.notifyDataSetChanged();
+            }
+        });
 
     }
+    ArrayList<BOOKS> getBookData(){
+        // Create CSDL
+        db = openOrCreateDatabase("books",MODE_PRIVATE,null);
+        // Truy van
+        String sqlSelectAll = "SELECT * FROM BOOKS";
+        Cursor resultSet = db.rawQuery(sqlSelectAll, null);
+        ArrayList<BOOKS> lsBook = new ArrayList<BOOKS>();
+
+        resultSet.moveToFirst();
+        while (true){
+            // Get data
+            int idBook = resultSet.getInt(0);
+            String nameBook = resultSet.getString(1);
+            int page = resultSet.getInt(2);
+            float price = resultSet.getFloat(3);
+            String description = resultSet.getString(4);
+            // Package object ==> create module class
+            BOOKS book = new BOOKS(idBook,nameBook,page,price,description);
+            // Add to list
+            lsBook.add(book);
+            // Move to next
+            resultSet.moveToNext();
+            if (resultSet.isAfterLast()){
+                break;
+            }
+        }
+        db.close();
+        return lsBook;
+    }
+    ArrayList<String> getNameBook(){
+        // Create CSDL
+        db = openOrCreateDatabase("books",MODE_PRIVATE,null);
+        // Truy van
+        String sqlSelectAll = "SELECT * FROM BOOKS";
+        Cursor resultSet = db.rawQuery(sqlSelectAll,null);
+        ArrayList<String> lsNameBook = new ArrayList<>();
+
+        resultSet.moveToFirst();
+        while (true){
+            // Get data
+            String nameBook = resultSet.getString(1);
+            // Add to list
+            lsNameBook.add(nameBook);
+            // Move to next
+            resultSet.moveToNext();
+            if (resultSet.isAfterLast()){
+                break;
+            }
+        }
+        db.close();
+        return lsNameBook;
+    }
+
 }
