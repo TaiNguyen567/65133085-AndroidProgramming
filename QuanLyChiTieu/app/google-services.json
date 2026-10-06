@@ -1,13 +1,13 @@
 {
   "project_info": {
-    "project_number": "88701948786",
-    "project_id": "android-project-10f2f",
-    "storage_bucket": "android-project-10f2f.firebasestorage.app"
+    "project_number": "548070218572",
+    "project_id": "qlct-1f7fa",
+    "storage_bucket": "qlct-1f7fa.firebasestorage.app"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:88701948786:android:a707dc7309815a045783eb",
+        "mobilesdk_app_id": "1:548070218572:android:5a57ce046be5883fd60de9",
         "android_client_info": {
           "package_name": "clc65.thanhtai.quanlychitieu"
         }
@@ -15,7 +15,7 @@
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyBF8axazh_PGFyGDz7GrKVtNCeqQyliiOc"
+          "current_key": "AIzaSyBQVG46UxTUPEPvNQSu7viXnRdwAjk-90I"
         }
       ],
       "services": {
